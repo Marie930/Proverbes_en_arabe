@@ -1,0 +1,110 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Appliquer la police Jost à tout le site */
+body {
+    font-family: 'Jost', sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    margin: 10px;
+}
+
+.shrikhand-regular {
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+/* Appliquer la police Jost à des éléments spécifiques */
+h1 {
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Appliquer la police Joste à des éléments spécifiques */
+h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+    
+}
+
+p {
+    text-align: center;
+}
+
+/*SECTION PROVERBES*/
+
+/* Par défaut (mobile) : 1 colonne */
+.proverbe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.proverbe-grid article {
+    text-align: center;
+    max-width: 300px;
+}
+
+/* Ajuster la taille des images */
+.proverbe-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.proverbe-section img {
+    height: 400px;
+    object-fit: cover;
+    grid-area: photo;
+    border-radius: 1rem;
+}
+
+.proverbe-item1 img,
+.proverbe-item2 img,
+.proverbe-item3 img,
+.proverbe-item4 img,
+.proverbe-item5 img,
+.proverbe-item6 img {
+    width: 300px;
+    height: 400px;
+}
+
+
+/*@MEDIA QUERY SECTION PROVERBES*/
+/* Media query pour les grands écrans */
+@media (min-width: 768px) {
+
+    .proverbe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colonnes pour les écrans de tablette et plus */
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    .proverbe-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 colonnes pour les écrans de tablette et plus */
+    }
+}
